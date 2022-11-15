@@ -22,6 +22,7 @@ await Host.CreateDefaultBuilder(args)
                     services.AddSignantConfiguration(hostContext.Configuration);
 
                     services.AddHostedService<StatusUpdatorJob>();
+                    services.AddSingleton<IStatusUpdateService, StatusUpdateService>();
                     services.AddSingleton(Console.Out);
                 }).RunConsoleAsync();
 Console.WriteLine("Hello, World!");

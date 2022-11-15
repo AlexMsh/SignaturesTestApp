@@ -3,6 +3,12 @@ Improvement points:
 	1. Unit tests were not created
 	2. Ideally we would probably have Application layer (see FileController)
 	3. No logging & healthmonitoring
+	4. Paging wasn't added for the SignatureData list endpoint (for the real life scenarios paging would be a must)
+	5. Sensitive configuration should be hidden (different approaches could be used)
+		a. Encoding config file
+		b. Using any KeyVault
+		c. ?
+		(For now some config setting values were simply ommited in config files)
 
 Concept:
 1. We separate contracts from the actual implementation so that:

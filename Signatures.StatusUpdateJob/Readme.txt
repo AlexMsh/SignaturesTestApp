@@ -12,8 +12,13 @@ So, at the moment, it's kind of "fire and forget"
 		This wasn't done in scope of test task due to 2 reasons:
 		a. To keep it relatively simple
 		b. To save some time on it
-
 	2. No logging and healthmonitoring was added
 	3. Job & scheduling logic (IHostedService implementation) should be separated from the actual logic
 	4. Unit tests were not created
-
+	5. No Batching is used (in a real world scenarios we would handle data in batches)
+	7. Task cancellation mechanism is not implemented (that's actually a part of the scheduling, still might be worth mentioning)
+	8. Sensitive configuration should be hidden (different approaches could be used)
+		a. Encoding config file
+		b. Using any KeyVault
+		c. ?
+		(For now some config setting values were simply ommited in config files)
